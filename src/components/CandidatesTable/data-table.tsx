@@ -14,7 +14,6 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { Button } from "../ui/button"
-import { Badge } from "lucide-react"
 
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
