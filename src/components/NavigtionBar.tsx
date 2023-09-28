@@ -2,7 +2,6 @@ import { FC } from "react"
 import { GrHomeRounded } from 'react-icons/gr'
 import { PiUsersThree, PiCalendarCheck, PiShareNetwork, PiFileText, PiNotebook, PiHeart } from 'react-icons/pi'
 import { IoIosArrowBack } from 'react-icons/io'
-import { IconContext } from 'react-icons'
 import { Avatar } from "./ui/avatar"
 import { Toggle } from "./ui/toggle"
 
