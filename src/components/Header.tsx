@@ -7,6 +7,7 @@ import { BiUserVoice } from 'react-icons/bi'
 import { IoIosArrowDown } from "react-icons/io"
 import { IconContext } from "react-icons"
 
+
 export const Header: FC = () => {
     return (
         <div className="flex justify-between pt-8 w-full">
