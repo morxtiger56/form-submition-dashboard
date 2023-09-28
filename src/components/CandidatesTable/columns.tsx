@@ -43,7 +43,6 @@ export const columns: ColumnDef<Candadent>[] = [
         header: "247 Candidates",
         cell: ({ cell }) => {
             const row = (cell.getValue() as Candadent)
-
             return (
                 <div className="flex gap-2 items-center">
                     <Avatar className="bg-muted text-muted-foreground grid place-items-center w-14 h-14">

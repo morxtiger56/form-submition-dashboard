@@ -13,6 +13,8 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import { Button } from "../ui/button"
+import { Badge } from "lucide-react"
 
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
@@ -37,7 +39,7 @@ export function DataTable<TData, TValue>({
     return (
         <div className="rounded-md border bg-white">
             <Table>
-                <TableHeader>
+                <TableHeader className="items-center">
                     {table.getHeaderGroups().map((headerGroup) => (
                         <TableRow key={headerGroup.id} >
                             {headerGroup.headers.map((header) => {
@@ -51,7 +53,27 @@ export function DataTable<TData, TValue>({
                                             )}
                                     </TableHead>
                                 )
+
                             })}
+
+                            <th>
+                                <div className="flex gap-4 px-1 items-center">
+                                    <Button className="border-none text-primary bg-transparent" variant={"outline"}>
+                                        Qualified
+                                    </Button>
+                                    <div className="h-[20px] w-[1px] bg-[#EEEEEE] ">
+                                    </div>
+
+                                    <Button className="border-none bg-transparent" variant={"outline"}>
+                                        Task <span className="ml-1 bg-[#F7F8FD] flex items-center justify-center py-1 px-2 text-xs rounded-full ">25</span>
+                                    </Button>
+                                    <div className="h-[20px] w-[1px] bg-[#EEEEEE] ">
+                                    </div>
+                                    <Button className="border-none bg-transparent" variant={"outline"}>
+                                        Disqualified <span className="ml-1 bg-[#F7F8FD] flex items-center justify-center py-1 px-2 text-xs rounded-full ">78</span>
+                                    </Button>
+                                </div>
+                            </th>
                         </TableRow>
                     ))}
                 </TableHeader>

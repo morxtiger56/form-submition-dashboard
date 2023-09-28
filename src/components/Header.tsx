@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { ComponentPropsWithRef, FC } from "react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"
 import { Button } from "./ui/button"
 import { PiTag } from "react-icons/pi"
@@ -6,11 +6,12 @@ import { FiUserX, FiUserCheck, FiMail } from 'react-icons/fi'
 import { BiUserVoice } from 'react-icons/bi'
 import { IoIosArrowDown } from "react-icons/io"
 import { IconContext } from "react-icons"
+import { cn } from "@/lib/utils"
 
 
-export const Header: FC = () => {
+export const Header: FC<ComponentPropsWithRef<"div">> = ({className}) => {
     return (
-        <div className="flex justify-between pt-8 w-full">
+        <div className={cn("flex justify-between pt-8 w-full", className)}>
             <Select>
                 <SelectTrigger className="w-[20rem] rounded-full bg-white font-medium text-primary">
                     <SelectValue placeholder="Opportunity Browsing" />
